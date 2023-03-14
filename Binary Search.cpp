@@ -30,7 +30,7 @@ int main(){
 		}
 	}
 	if(pointer=1){
-		cout<<"\nNumber found in indeks"<<mid<<endl;
+		cout<<"\nNumber found in indeks "<<mid<<endl;
 	}
 	else{
 		cout<<"Data not found";
