@@ -19,7 +19,7 @@ int main(){
 	while(pointer==0 && first<=last){
 		mid=(first+last)/2;
 		if (array[mid]==find){
-			pointer=1;
+			pointer==1;
 			break;
 		}
 		else if(array[mid]<find){
