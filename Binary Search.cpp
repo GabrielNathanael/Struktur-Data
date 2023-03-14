@@ -4,10 +4,10 @@ using namespace std;
 int main(){
 	
 
-	int number[5]={1,3,5,7,11};
+	int array[5]={1,3,5,7,11};
 	int x;
 	for (x=0;x<5;x++){
-		cout<< number[x]<<" ";
+		cout<< array[x]<<" ";
     }
     
 	int find;
@@ -18,11 +18,11 @@ int main(){
 	first=0,last=5-1,pointer=0;
 	while(pointer==0 && first<=last){
 		mid=(first+last)/2;
-		if (number[mid]==find){
+		if (array[mid]==find){
 			pointer=1;
 			break;
 		}
-		else if(number[mid]<find){
+		else if(array[mid]<find){
 			first=mid+1;
 		}
 		else{
