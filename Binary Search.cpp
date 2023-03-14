@@ -29,7 +29,7 @@ int main(){
 			last=mid-1;
 		}
 	}
-	if(pointer=1){
+	if(pointer==1){
 		cout<<"\nNumber found in indeks "<<mid<<endl;
 	}
 	else{
