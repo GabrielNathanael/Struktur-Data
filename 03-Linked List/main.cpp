@@ -12,6 +12,16 @@ int main()
   list1.insertAfter(2, 70);
 
   cout << endl;
+  
+  list1.printAll();
+  
+  list1.deleteFromHead();
+  list1.printAll();
 
+  list1.deleteFromTail();
+  list1.printAll();
+
+  list1.deleteByValue(5);
+  list1.deleteByValue(70);
   list1.printAll();
 }
