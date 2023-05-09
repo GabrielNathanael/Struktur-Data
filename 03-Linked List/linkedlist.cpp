@@ -83,6 +83,78 @@ void LinkedList::trackNode()
   }
 }
 
+void LinkedList::deleteFromHead()
+{
+  if (head == NULL)
+  {
+    cout << "Empty Linked List" << endl;
+    return;
+  }
+  Node *tmp = head;
+  head = head->next;
+  delete tmp;
+  if (head == NULL)
+  {
+    tail = NULL;
+  }
+}
+
+void LinkedList::deleteFromTail()
+{
+  if (head == NULL)
+  {
+    cout << "Empty Linked List" << endl;
+    return;
+  }
+  if (head == tail)
+  {
+    delete head;
+    head = NULL;
+    tail = NULL;
+    return;
+  }
+  Node *tmp = head;
+  while (tmp->next != tail)
+  {
+    tmp = tmp->next;
+  }
+  delete tail;
+  tail = tmp;
+  tail->next = NULL;
+}
+
+void LinkedList::deleteByValue(int value)
+{
+  if (head == NULL)
+  {
+    cout << "Empty Linked List" << endl;
+    return;
+  }
+  if (head->value == value)
+  {
+    deleteFromHead();
+    return;
+  }
+  if (tail->value == value)
+  {
+    deleteFromTail();
+    return;
+  }
+  Node *tmp = head;
+  while (tmp->next != NULL && tmp->next->value != value)
+  {
+    tmp = tmp->next;
+  }
+  if (tmp->next == NULL)
+  {
+    cout << "Not a existed node in Linked List!" << endl;
+    return;
+  }
+  Node *nodeToDelete = tmp->next;
+  tmp->next = nodeToDelete->next;
+  delete nodeToDelete;
+}
+
 void LinkedList::printAll()
 {
   Node *tmp = head;
