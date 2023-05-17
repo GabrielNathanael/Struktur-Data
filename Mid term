@@ -38,7 +38,7 @@ bool periksaTandaKurung(string inputStr) {
 			
 			char element = delimiterStack.top();
 			// 3c. Jika elemen teratas sesuai dengan pasangan karakter c, maka pop delimiterStack
-			if((char element  == '(' && c == ')') || (char element == '[' && c == ']') || (char element == '{' && c == '}') ){
+			if(( element  == '(' && c == ')') || ( element == '[' && c == ']') || ( element == '{' && c == '}') ){
 				delimiterStack.pop();
 			}
 			
@@ -50,14 +50,14 @@ bool periksaTandaKurung(string inputStr) {
     
     //4. setelah semua karakter inputStr diproses, periksa apakah masih ada elemen di delimiterStack.
     //   4a. jika masih ada elemen dalam delimiterStack, maka masih ada tanda kurung buka atau tutup yang tidak ada pasangannya (return false)
-    if (delimiterStack.empty()){
+    if (!delimiterStack.empty()){
         return false;
     }
     //   4b. jika tidak ada elemen dalam delimiterStack, maka semua tanda ada pasangannya (return true)
     else{
     	return true;
 	}
-    
+    }
 }
 
 
