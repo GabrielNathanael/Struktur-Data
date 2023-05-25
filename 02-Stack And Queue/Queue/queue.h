@@ -5,7 +5,7 @@ public:
 };
 
 class Queue {
-private:
+public:
     Node* front;
     Node* rear;
 
