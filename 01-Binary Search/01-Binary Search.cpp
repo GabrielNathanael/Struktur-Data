@@ -14,27 +14,21 @@ int main(){
 	cout <<"\nInput number : ";
 	cin>>find;
 	
-	int first,mid,last,pointer;
-	first=0,last=5-1,pointer=0;
-	while(pointer==0 && first<=last){
+	int first,mid,last;
+	first=0,last=5-1;
+	while(first<=last){
 		mid=(first+last)/2;
-		if (number[mid]==find){
-			pointer=1;
-			break;
-		}
-		else if(number[mid]<find){
-			first=mid+1;
-		}
-		else{
-			last=mid-1;
-		}
-	}
-	if(pointer=1){
-		cout<<"\nNumber found in indeks"<<mid<<endl;
-	}
-	else{
-		cout<<"Data not found";
-	}
-	
-	return 0;
+	if (number[mid] == find) {
+            cout << "\nNumber found in index " << mid << endl;
+            return 0;
+        } else if (number[mid] < find) {
+            first = mid + 1;
+        } else {
+            last = mid - 1;
+        }
+    }
+    
+    cout << "Data not found";
+
+    return 0;
 }
