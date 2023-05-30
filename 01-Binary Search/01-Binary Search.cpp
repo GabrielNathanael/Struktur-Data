@@ -28,7 +28,7 @@ int main(){
         }
     }
     
-    cout << "Data not found";
+    cout << "Data not found in list";
 
     return 0;
 }
