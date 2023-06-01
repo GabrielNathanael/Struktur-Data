@@ -66,28 +66,11 @@ void LinkedList::insertAfter(int node, int input)
 }
 
 
-
-void LinkedList::deleteFromHead()
-{
-  if (head == NULL)
-  {
-    cout << "Empty Linked List" << endl;
-    return;
-  }
-  Node *tmp = head;
-  head = head->next;
-  delete tmp;
-  if (head == NULL)
-  {
-    tail = NULL;
-  }
-}
-
 void LinkedList::deleteFromTail()
 {
   if (head == NULL)
   {
-    cout << "Empty Linked List" << endl;
+    cout << "Linked list is empty!" << endl;
     return;
   }
   if (head == tail)
@@ -111,7 +94,7 @@ void LinkedList::deleteByValue(int value)
 {
   if (head == NULL)
   {
-    cout << "Empty Linked List" << endl;
+    cout << "Linked list is empty!" << endl;
     return;
   }
   if (head->value == value)
@@ -131,12 +114,12 @@ void LinkedList::deleteByValue(int value)
   }
   if (tmp->next == NULL)
   {
-    cout << "Not a existed node in Linked List!" << endl;
+    cout << "Node not found!" << endl;
     return;
   }
-  Node *nodeToDelete = tmp->next;
-  tmp->next = nodeToDelete->next;
-  delete nodeToDelete;
+  Node *tmpNode = tmp->next;
+  tmp->next = tmpNode->next;
+  delete tmpNode;
 }
 
 void LinkedList::printAll()
