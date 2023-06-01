@@ -65,23 +65,7 @@ void LinkedList::insertAfter(int node, int input)
   }
 }
 
-void LinkedList::trackNode()
-{
-  Node *tmp = head;
-  int pos = 1;
 
-  while (tmp != NULL)
-  {
-    if (pos == 3)
-    {
-      cout << tmp->value;
-      return;
-    }
-
-    tmp = tmp->next;
-    pos++;
-  }
-}
 
 void LinkedList::deleteFromHead()
 {
