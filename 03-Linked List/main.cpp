@@ -21,7 +21,7 @@ int main()
   list1.deleteFromTail();
   list1.printAll();
 
-  list1.deleteByValue(5);
   list1.deleteByValue(70);
   list1.printAll();
+
 }
