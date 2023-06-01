@@ -16,14 +16,14 @@ public:
     void insertToHead(int);
     void insertToTail(int);
     void insertAfter(int, int);
+    
+	void deleteFromHead();
+  	void deleteFromTail();
+  	void deleteByValue(int);
 
-    void deleteFromHead(int);
-    void deleteFromTail(int);
-    void deleteByValue(int);
 
     void printAll();
-    void trackNode();
-
+  
     LinkedList() {
         head = tail = NULL;
     };
