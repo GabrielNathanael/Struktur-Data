@@ -21,9 +21,11 @@ int main(){
 	if (number[mid] == find) {
             cout << "\nNumber found in index " << mid << endl;
             return 0;
-        } else if (number[mid] < find) {
+        } 
+	if else (number[mid] < find) {
             first = mid + 1;
-        } else {
+        } 
+	else {
             last = mid - 1;
         }
     }
