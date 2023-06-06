@@ -17,9 +17,9 @@ public:
     void insertToTail(int);
     void insertAfter(int, int);
     
-	void deleteFromHead();
-  	void deleteFromTail();
-  	void deleteByValue(int);
+
+    void deleteFromTail();
+    void deleteByValue(int);
 
 
     void printAll();
