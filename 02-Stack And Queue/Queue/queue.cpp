@@ -19,7 +19,8 @@ void Queue::enqueue(int x) {
     if (isEmpty()) {
         front = newNode;
         rear = newNode;
-    } else {
+    }
+    else {
         rear->next = newNode;
         rear = newNode;
     }
@@ -36,7 +37,8 @@ int Queue::dequeue() {
     if (front == rear) {
         front = NULL;
         rear = NULL;
-    } else {
+    } 
+    else {
         front = front->next;
     }
     delete temp;
