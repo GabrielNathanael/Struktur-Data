@@ -58,7 +58,54 @@ void BinaryTree::postOrderRecursive(Node *currentRoot){
 	}
 }
 
+Node* BinaryTree::search(int val){
+    Node* node = root;
+    while (node != NULL) {
+        if (node->id == val) {
+            court << "This value  included in the tree" << endl;
+            return node;
+        }
+        if (val < node->id) {
+            node = node->left;
+        } else {
+            node = node->right;
+        }
+    }
+    cout << "This value not included in the tree" << endl;
+    return NULL;
+}
 
+ 	
+
+Node* BinaryTree::findMin() {
+    Node* node = root;
+    while (node != NULL && node->left != NULL) {
+        node = node->left;
+    }
+
+    if (node != NULL) {
+        cout << "Min Value: " << node->id << endl;
+    } else {
+        cout << "Binary tree is empty." << endl;
+    }
+
+    return node;
+}
+
+Node* BinaryTree::findMax() {
+    Node* node = root;
+    while (node != NULL && node->right != NULL) {
+        node = node->right;
+    }
+
+    if (node != NULL) {
+        cout << "Max value: " << node->id << endl;
+    } else {
+        cout << "Binary tree is empty." << endl;
+    }
+
+    return node;
+}
 
 
 
